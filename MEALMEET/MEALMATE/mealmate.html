@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Mate</title>
+    <link rel="stylesheet" href="mealmate.css">
+    <link rel="stylesheet" href="Animations.css">
+    <link rel="stylesheet" href="compatibility.css">
+</head>
+<body>
+<div class="main">
+
+<!-- NAV (with user profile) -->
+<nav id="mainNav">
+    <div class="nav-left">
+        <a href="#">Home</a>
+        <a href="about.html">About</a>
+        <a href="bmi.html">Meal</a>
+    </div>
+
+   <div class="nav-logo">
+    <img src="PNGS/tag.png" alt="Meal Mate">
+   </div>
+   
+    <div class="nav-right" style="position: relative;">
+        <!-- User Profile (replaces search bar) -->
+        <div class="user-profile" id="userProfile" onclick="toggleProfileDropdown()">
+            <div class="user-avatar" id="userAvatar">U</div>
+            <div class="user-info">
+                <div class="user-name" id="userName">User</div>
+                <div class="user-email" id="userEmail">user@mealmate.local</div>
+            </div>
+        </div>
+
+        <!-- Profile Dropdown -->
+        <div class="profile-dropdown" id="profileDropdown">
+            <button class="profile-dropdown-item" onclick="viewProfile()">👤 View Profile</button>
+            <button class="profile-dropdown-item" onclick="editProfile()">✏️ Edit Profile</button>
+            <button class="profile-dropdown-item" onclick="viewSettings()">⚙️ Settings</button>
+            <div class="profile-dropdown-divider"></div>
+            <button class="profile-dropdown-item logout-btn" onclick="logout()">🚪 Logout</button>
+        </div>
+    </div>
+</nav>
+
+<div class="logo">
+    <img src="PNGS/logo.png" style="width: 60vh; height: 40vh; float: right; margin-top: 20vh;">
+</div>
+
+<div class="Front">
+<div class="banner">
+        <div class="banner-item">
+            <h2>FOOD</h2>
+        </div>
+        <div class="banner-item">
+            <div class="banner-icon">🍽️</div>
+        </div>
+        <div class="banner-item">
+            <h2>MORE<br>EASIER!</h2>
+        </div>
+        <div class="banner-item">
+            <div class="banner-icon">💰🧮</div>
+        </div>
+        <div class="banner-item">
+            <h2>BUDGETING</h2>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="mealmate-page">
+  <div class="container">
+        <!-- LEFT PANEL -->
+        <div class="panel">
+            <h1>🏃 BMI CALCULATOR</h1>
+
+            <input type="number" id="weight" placeholder="Weight (kg)" min="20" max="300" step="0.1">
+            <input type="number" id="height" placeholder="Height (cm)" min="100" max="250" step="0.1">
+            <input type="number" id="age" placeholder="Age (years)" min="10" max="120">
+
+            <div class="gender-group">
+                <button class="gender-btn active" data-gender="male">MALE</button>
+                <button class="gender-btn" data-gender="female">FEMALE</button>
+            </div>
+
+            <select id="activity">
+                <option value="" disabled selected>Activity Level</option>
+                <option value="1.2">Sedentary</option>
+                <option value="1.375">Lightly Active</option>
+                <option value="1.55">Moderately Active</option>
+                <option value="1.725">Very Active</option>
+                <option value="1.9">Athlete</option>
+            </select>
+
+            <select id="goal">
+                <option value="" disabled selected>Goal</option>
+                <option value="lose">Lose Weight</option>
+                <option value="maintain">Maintain Weight</option>
+                <option value="gain">Gain Muscle</option>
+            </select>
+
+            <input type="number" id="budget" placeholder="Budget per meal (₱)" min="50" step="50">
+
+            <button id="calculateBtn">CALCULATE</button>
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="content">
+            <div class="info-box" id="initialMessage">
+                Welcome <strong id="welcomeUser">User</strong>! Enter your details to calculate your BMI and get personalized nutrition recommendations.
+            </div>
+
+            <div id="results"></div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+<script src="Mealmate.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+.auth-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.auth-card {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.5s ease;
+}
+
+.signup-card {
+  grid-column: 1;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.auth-header p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.auth-form h2 {
+  color: #333;
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+}
+
+.auth-form > button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px;
+  font-size: 1.05rem;
+}
+
+.auth-footer {
+  margin-top: 24px;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.auth-footer p {
+  margin-bottom: 12px;
+}
+
+.auth-footer a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+.privacy-note {
+  font-size: 0.8rem !important;
+  color: #999;
+}
+
+.auth-info {
+  color: white;
+  animation: slideInRight 0.5s ease;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.auth-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+}
+
+.auth-info ul {
+  list-style: none;
+}
+
+.auth-info li {
+  padding: 12px 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .auth-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .signup-card {
+    grid-column: 1;
+  }
+
+  .auth-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 20px 16px;
+  }
+
+  .auth-card {
+    padding: 24px;
+  }
+
+  .auth-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .auth-info li {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About – MealMeet</title>
+ <link rel="stylesheet" href="compatibility.css">
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding-top: 90px;
+  background: repeating-linear-gradient(
+    90deg,
+    #fdeaea,
+    #fdeaea 40px,
+    #ffffff 40px,
+    #ffffff 80px
+  );
+}
+
+/* ===== NAV ===== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #b51f1f;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+/* ===== PAGE ===== */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  background: white;
+  border-radius: 24px;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+h1 {
+  color: #b51f1f;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #b51f1f;
+  margin-top: 40px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+ul {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <strong>MealMeet</strong>
+  <div>
+    <a href="mealmate.html">Meal Planner</a>
+    <a href="about.html">About</a>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+  <h1>About MealMeet</h1>
+
+  <p>
+    <strong>MealMeet</strong> is a meal planning and budgeting website designed to
+    help users choose healthy and affordable meals based on their goals, budget,
+    and daily needs.
+  </p>
+
+  <h2>Purpose</h2>
+  <p>
+    The goal of MealMeet is to make meal planning easier for students and individuals
+    by providing organized meal suggestions that support different goals such as
+    dieting, maintaining weight, or gaining muscle.
+  </p>
+
+  <h2>Key Features</h2>
+  <ul>
+    <li>Goal-based meal planning (Diet, Maintain, Gain Muscle)</li>
+    <li>Budget-friendly meal suggestions</li>
+    <li>Weekly meal planner</li>
+    <li>Expandable meal cards with ingredients and recipes</li>
+    <li>Email export of meal plans</li>
+    <li>Offline-capable client-side login</li>
+  </ul>
+
+  <h2>How It Works</h2>
+  <p>
+    Users log in using a demo client-side login. Once logged in, they can generate
+    meal plans based on their selected goal and budget. Meal plans can be viewed
+    weekly and sent directly to the user's email.
+  </p>
+
+  <h2>Disclaimer</h2>
+  <p>
+    MealMeet is a demonstration project created for academic purposes. The login
+    system is simulated using local storage and is not intended for real-world
+    authentication or medical use.
+  </p>
+</div>
+
+</body>
+</html>
